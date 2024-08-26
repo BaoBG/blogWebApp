@@ -1,0 +1,29 @@
+<%- include("partials/header.ejs") %>
+
+<section class="py-3 text-center container">
+    <div class="row py-lg-5">
+        <div class="col-lg-6 col-md-8 mx-auto">
+            <h1 class="fw-light">Create Post</h1>
+        </div>
+    </div>
+</section>
+    <form>
+        <div class="form-floating">
+            <input type="text" class="form-control" id="floatingName" placeholder="Name">
+            <label for="floatingName">Name</label>
+          </div>
+
+      <div class="form-floating">
+        <input type="text" class="form-control" id="floatingTitle" placeholder="Title">
+        <label for="floatingTitle">Title</label>
+      </div>
+      <div class="form-floating">
+        <textarea class="form-control"  name="description" id="floatingDescription" placeholder="Password" width="500px" height="300px"></textarea>
+        <!-- <input type="text" class="form-control" id="floatingDescription" placeholder="Password"> -->
+        <label for="floatingDescription">Description</label>
+      </div>
+
+      <button class="btn btn-primary w-100 py-2" type="submit">Submit</button>
+    </form>
+
+    <%- include("partials/footer.ejs") %>
