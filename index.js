@@ -18,6 +18,17 @@ app.get("/create", (req, res) => {
     res.render("create.ejs");
 })
 
+app.post("/", (req, res) => {
+    var nameOfAuthor = req.body["floatingName"];
+    var titleOfPost = req.body["floatingTitle"];
+    var descriptionOfPost = req.body["floatingDescription"];
+
+    res.render("index.ejs", {
+        name : nameOfAuthor,
+        title : titleOfPost,
+        description : descriptionOfPost
+    })
+})
 
 app.listen(port, () => {
     console.log(`Server is listening on ${port}`);
